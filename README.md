@@ -8,7 +8,7 @@ Site statique prêt à héberger sur Vercel.
 2. Envoyer le dossier sur GitHub.
 3. Importer le repo dans Vercel.
 4. Build command : `npm run build`
-5. Output directory : `dist`
+5. Output directory : `dist`  
 
 ## En local
 
