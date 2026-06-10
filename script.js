@@ -1,118 +1,20 @@
-const solutions = [
-  {
-    name:"Catalogique", icon:"▤", price:"49€ / 89€", monthly:49,
-    promise:"Présentez vos produits. Gardez la maîtrise de vos ventes.",
-    target:"Grossistes, négociants, industriels, fournisseurs B2B.",
-    bullets:["Catalogues toujours à jour","Produits et variantes centralisés","Demandes d’information et devis"],
-    detail:"Une plateforme de présentation commerciale pour les entreprises qui travaillent sur devis. Ce n’est pas une boutique en ligne : c’est un outil pour valoriser les produits, partager des catalogues et ouvrir le dialogue commercial."
-  },
-  {
-    name:"Consentify", icon:"✍", price:"29€ / mois", monthly:29,
-    promise:"Tout ce qui protège votre activité. Enfin réuni au même endroit.",
-    target:"Esthétique, soins, thérapeutes, artisans.",
-    bullets:["Signature digitale","Photos & preuves","Historique client centralisé"],
-    detail:"Consentify centralise signatures, validations, photos, suivi et historique client. Chaque document peut contenir plusieurs points validés, être signé, généré en PDF et retrouvé rapidement."
-  },
-  {
-    name:"Evolia", icon:"◉", price:"79€ / 129€", monthly:79,
-    promise:"Parlez. Evolia organise, analyse et valorise votre suivi client.",
-    target:"Coachs, thérapeutes, nutritionnistes, accompagnants.",
-    bullets:["Note vocale intelligente","IA métier évolutive","Bilans et synthèses"],
-    detail:"Evolia transforme les notes vocales et informations client en dossiers structurés. L’IA comprend, classe, mémorise et prépare des bilans basés sur l’historique complet."
-  },
-  {
-    name:"Tournéo", icon:"⌖", price:"39€ / 99€", monthly:39,
-    promise:"Toutes vos interventions terrain au même endroit.",
-    target:"Techniciens, prestataires à domicile, maintenance, SAV.",
-    bullets:["Planification terrain","Rôles équipe","Validation, notes, photos"],
-    detail:"Tournéo permet d’organiser, suivre et piloter l’activité terrain : interventions, tournées, affectations, validation, notes, photos, historique et statistiques."
-  },
-  {
-    name:"ProPose", icon:"□", price:"99€ / 120€", monthly:99,
-    promise:"Chaque chantier. Chaque étape. Sous contrôle.",
-    target:"Cuisinistes, agenceurs, poseurs, métiers de prise de mesure.",
-    bullets:["Dossier mission complet","Photos, signatures, PDF","Pose, livraison, SAV"],
-    detail:"ProPose centralise chaque mission de la prise de mesure à la réception client : documents, photos, validations, signatures, rapports PDF et suivi SAV."
-  }
-];
+const solutions=[{name:"Catalogique",icon:"C",price:"49€ / 89€",promise:"Présenter des produits et leurs variantes sans créer une boutique en ligne.",intro:"Pour les industriels, grossistes, négociants et fournisseurs travaillant principalement sur devis. Catalogique permet de présenter les produits dans une interface moderne, claire et toujours à jour.",targets:["Industriels","Grossistes","Négociants","Fournisseurs B2B","Entreprises travaillant sur devis"],offers:[{title:"Standard — 49€/mois",items:["Accès à Catalogique mutualisé","Publication de catalogues via liens dédiés","Gestion des produits et variantes","Attributs métiers enrichis par les usages du secteur","Demandes d'informations et de devis"]},{title:"Premium — 89€/mois",items:["Application dédiée aux couleurs du client","URL personnalisée","Logo et identité propres","Publication catalogue par catalogue ou portail global","Structure personnalisable","Même mécanique de gestion que le Standard"]}],note:"Dans les deux cas, Catalogique conserve la maîtrise des échanges commerciaux et des devis."},{name:"Consentify",icon:"S",price:"29€ / mois",promise:"Centraliser signatures, validations, documents, photos et historique client.",intro:"Consentify est pensé pour les métiers qui ont besoin de garder une trace claire de ce qui a été expliqué, validé ou signé avec un client.",targets:["Instituts de beauté","Thérapeutes","Professionnels du bien-être","Activités avec validations ou consentements","Usages artisanaux possibles"],offers:[{title:"Offre unique — 29€/mois",items:["Signature digitale","Validation de plusieurs éléments par document","Historique client centralisé","Gestion documentaire","Photos et pièces justificatives","Modèles réutilisables"]},{title:"Annuel — 290€/an",items:["Même offre","Deux mois offerts","Idéal pour les clients qui souhaitent un outil simple et durable"]}],note:"L'application peut évoluer vers des usages artisanaux, de chantier ou de suivi de travaux."},{name:"Evolia",icon:"E",price:"79€ / 129€",promise:"Structurer et exploiter les dossiers clients ou patients avec l'aide de l'IA.",intro:"Evolia permet au professionnel de travailler librement : saisie ordinateur, notes vocales, ou les deux. La note vocale est une aide à l'efficacité, pas une obligation.",targets:["Coachs sportifs","Nutritionnistes","Thérapeutes","Sophrologues","Hypnothérapeutes","Accompagnants"],offers:[{title:"Essentiel — 79€/mois",items:["Jusqu'à 50 dossiers actifs","Jusqu'à 50 analyses IA avancées par mois","Notes vocales et synthèses automatiques","Gestion complète des dossiers"]},{title:"Premium — 129€/mois",items:["Dossiers illimités","Analyses IA avancées illimitées","Accès prioritaire aux évolutions","Utilisation intensive sans limitation métier"]}],note:"Les deux versions disposent des mêmes fonctionnalités. La différence se situe surtout dans les volumes d'utilisation."},{name:"Tournéo",icon:"T",price:"39€ / 99€",promise:"Organiser, suivre et piloter l'activité terrain.",intro:"Tournéo permet d'organiser les tournées, interventions, visites commerciales ou techniques avec suivi, validation, notes, photos et historique.",targets:["Techniciens","Maintenance","SAV","Commerciaux terrain","Prestataires à domicile","Livraison et distribution"],offers:[{title:"Solo — 39€/mois",items:["1 utilisateur","Gestion des tournées","Gestion des interventions","Notes et photos","Historique complet"]},{title:"Équipe — 99€/mois",items:["Jusqu'à 5 collaborateurs","Gestion des rôles","Affectation des interventions","Pilotage d'équipe","Statistiques avancées","+10€/mois par collaborateur supplémentaire"]}],note:"Tournéo est clairement pensé comme une plateforme de pilotage terrain, pas seulement comme une liste d'adresses."},{name:"ProPose",icon:"P",price:"99€ / 120€",promise:"Centraliser les missions de prise de mesure, pose, livraison et SAV.",intro:"Chaque mission dispose de son propre dossier numérique : photos, documents, signatures, validations et rapports PDF.",targets:["Cuisinistes","Agenceurs","Poseurs","Métiers de prise de mesure","Livraison","SAV"],offers:[{title:"Standard — 99€/mois",items:["Engagement annuel","Gestion complète des missions","Rapports PDF","Signatures","Photos et historique"]},{title:"Flex — 120€/mois",items:["Sans engagement annuel","Fonctionnalités identiques","Plus de souplesse pour le client"]}],note:"Historiquement conçu pour les cuisinistes, mais adaptable à tous les métiers de la prise de mesure, de la pose et de la livraison."}];
 
-const solutionGrid = document.getElementById("solutionsGrid");
-solutionGrid.innerHTML = solutions.map((s,i)=>`
-  <article>
-    <div class="solution-icon">${s.icon}</div>
-    <span class="tag">${s.price}</span>
-    <h3>${s.name}</h3>
-    <p>${s.promise}</p>
-    <ul class="solution-list">${s.bullets.map(b=>`<li>${b}</li>`).join("")}</ul>
-    <button class="btn ghost more" onclick="openSolution(${i})">Voir la fiche</button>
-  </article>
-`).join("");
+const container=document.getElementById("solutionsList");
+container.innerHTML=solutions.map(s=>`<article class="solution-full"><div class="solution-header"><div><div class="solution-name"><span class="solution-icon">${s.icon}</span><div class="solution-title"><h3>${s.name}</h3><p>${s.promise}</p></div></div><p>${s.intro}</p></div><span class="price-chip">${s.price}</span></div><div class="solution-body"><div class="offer-grid">${s.offers.map(o=>`<div class="offer-card"><strong>${o.title}</strong><ul>${o.items.map(i=>`<li>${i}</li>`).join("")}</ul></div>`).join("")}</div><div class="target-card"><b>Cibles principales</b><ul>${s.targets.map(t=>`<li>${t}</li>`).join("")}</ul><p>${s.note}</p></div></div></article>`).join("");
 
-const modal = document.getElementById("solutionModal");
-const modalContent = document.getElementById("modalContent");
-document.getElementById("closeModal").onclick = () => modal.close();
+const visualFiles=[["Kit Distributeur 1.png","Couverture"],["Kit Distributeur 2 - Catalogique.png","Catalogique"],["Kit Distributeur 3 - Consentify.png","Consentify"],["Kit Distributeur 4 - Evolia.png","Evolia"],["Kit Distributeur 5 - Tournéo.png","Tournéo"],["Kit Distributeur 6 - ProPose.png","ProPose"],["Kit Distributeur 7 - Autres.png","Autres solutions"],["Kit Distributeur 8 - Partenariat.png","Projection partenariat"],["Kit Distributeur 9.png","Contact"]];
+let visualIndex=0;
+const img=document.getElementById("visualImage"),cap=document.getElementById("visualCaption"),dots=document.getElementById("visualDots");
+function renderVisual(){img.src="./"+visualFiles[visualIndex][0];cap.textContent=`${visualIndex+1} / ${visualFiles.length} — ${visualFiles[visualIndex][1]}`;dots.innerHTML=visualFiles.map((_,i)=>`<button type="button" class="${i===visualIndex?"active":""}" data-i="${i}"></button>`).join("");dots.querySelectorAll("button").forEach(b=>b.onclick=()=>{visualIndex=Number(b.dataset.i);renderVisual();});}
+document.getElementById("prevVisual").onclick=()=>{visualIndex=(visualIndex-1+visualFiles.length)%visualFiles.length;renderVisual();};
+document.getElementById("nextVisual").onclick=()=>{visualIndex=(visualIndex+1)%visualFiles.length;renderVisual();};
+renderVisual();
 
-function openSolution(i){
-  const s = solutions[i];
-  modalContent.innerHTML = `
-    <div class="modal-body">
-      <span class="tag">${s.price}</span>
-      <h3>${s.name}</h3>
-      <p><strong>${s.promise}</strong></p>
-      <div class="modal-grid">
-        <div class="modal-card"><b>Cible</b><p>${s.target}</p></div>
-        <div class="modal-card"><b>Positionnement</b><p>${s.detail}</p></div>
-        <div class="modal-card"><b>Fonctionnalités clés</b><p>${s.bullets.join(" • ")}</p></div>
-        <div class="modal-card"><b>Partenaire</b><p>50% la première année, puis 25% les années suivantes.</p></div>
-      </div>
-    </div>`;
-  modal.showModal();
-}
-
-const galleryFiles = [
-  "Kit Distributeur 2 - Catalogique.png",
-  "Kit Distributeur 3 - Consentify.png",
-  "Kit Distributeur 4 - Evolia.png",
-  "Kit Distributeur 5 - Tournéo.png",
-  "Kit Distributeur 6 - ProPose.png",
-  "Kit Distributeur 7 - Autres.png",
-  "Kit Distributeur 8 - Partenariat.png"
-];
-let galleryIndex = 0;
-const galleryImg = document.getElementById("galleryImg");
-const dots = document.getElementById("galleryDots");
-
-function renderGallery(){
-  galleryImg.src = `./assets/${galleryFiles[galleryIndex]}`;
-  dots.innerHTML = galleryFiles.map((_,i)=>`<button class="${i===galleryIndex?'active':''}" onclick="galleryIndex=${i};renderGallery()"></button>`).join("");
-}
-document.querySelector(".next").onclick = () => {galleryIndex=(galleryIndex+1)%galleryFiles.length;renderGallery()};
-document.querySelector(".prev").onclick = () => {galleryIndex=(galleryIndex-1+galleryFiles.length)%galleryFiles.length;renderGallery()};
-renderGallery();
-
-const sliderData = [
-  {key:"catalogique", label:"Catalogique", value:10, price:49},
-  {key:"consentify", label:"Consentify", value:10, price:29},
-  {key:"evolia", label:"Evolia", value:7, price:93.3},
-  {key:"tourneo", label:"Tournéo", value:7, price:56.14},
-  {key:"propose", label:"ProPose", value:3, price:99}
-];
-
-const sliders = document.getElementById("sliders");
-sliders.innerHTML = sliderData.map((s,i)=>`
-  <div class="slider-row">
-    <label for="${s.key}">${s.label}</label>
-    <input id="${s.key}" type="range" min="0" max="60" value="${s.value}" oninput="updateSlider(${i}, this.value)" />
-    <output id="${s.key}Out">${s.value}</output>
-  </div>
-`).join("");
-
-function eur(n){return new Intl.NumberFormat("fr-FR",{style:"currency",currency:"EUR",maximumFractionDigits:0}).format(n)}
-function updateSlider(i,val){sliderData[i].value = Number(val);document.getElementById(sliderData[i].key+"Out").textContent = val;calc();}
-function calc(){
-  const ca = sliderData.reduce((sum,s)=>sum + s.value * s.price * 12, 0);
-  document.getElementById("caTotal").textContent = eur(ca);
-  document.getElementById("commissionY1").textContent = eur(ca * .5);
-  document.getElementById("commissionRecurring").textContent = eur(ca * .25) + " / an";
-}
+const items=[{key:"catalogique",label:"Catalogique",price:49,initial:5,max:50},{key:"consentify",label:"Consentify",price:29,initial:5,max:50},{key:"evolia",label:"Evolia",price:79,initial:3,max:40},{key:"tourneo",label:"Tournéo",price:39,initial:3,max:40},{key:"propose",label:"ProPose",price:99,initial:2,max:30}];
+const panel=document.getElementById("sliderPanel");
+panel.innerHTML=items.map(it=>`<div class="slider-row"><label for="${it.key}">${it.label}</label><input id="${it.key}" type="range" min="0" max="${it.max}" value="${it.initial}"><output id="${it.key}Output">${it.initial}</output></div>`).join("");
+function euros(n){return new Intl.NumberFormat("fr-FR",{style:"currency",currency:"EUR",maximumFractionDigits:0}).format(n);}
+function calc(){let total=0;items.forEach(it=>{const q=Number(document.getElementById(it.key).value);total+=q*it.price*12;});document.getElementById("annualRevenue").textContent=euros(total);document.getElementById("yearOneCommission").textContent=euros(total*.5);document.getElementById("recurringCommission").textContent=euros(total*.25)+" / an";}
+items.forEach(it=>{const input=document.getElementById(it.key),output=document.getElementById(it.key+"Output");input.addEventListener("input",()=>{output.textContent=input.value;calc();});});
 calc();
